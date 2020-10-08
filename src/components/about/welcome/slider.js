@@ -1,31 +1,28 @@
-import React from "react";
-import Slider from "react-slick";
-import bg from "../../../assets/images/bg/nosotros-bg.jpg";
+import React from "react"
+import Slider from "react-slick"
 
-const welcomeSlider = () => {
+const welcomeSlider = props => {
   const settings = {
     arrows: true,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-  };
+  }
 
   return (
     <div className="owl-carousel owl-theme">
       <Slider {...settings}>
         <div className="item">
-          <img className="img-fluid" src={bg} alt="testing" />
-        </div>
-        <div className="item">
-          <img className="img-fluid" src={bg} alt="testing" />
-        </div>
-        <div className="item">
-          <img className="img-fluid" src={bg} alt="testing" />
+          <img
+            className="img-fluid"
+            src={props.image.sourceUrl}
+            alt={props.image.slug}
+          />
         </div>
       </Slider>
     </div>
-  );
-};
+  )
+}
 
-export default welcomeSlider;
+export default welcomeSlider

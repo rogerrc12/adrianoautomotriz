@@ -13,7 +13,7 @@ const corporativo = () => {
   return (
     <Layout location="/servicio-corporativo">
       <SEO title="Servicio corporativo" />
-      <SectionHeader sectionTitle="Servicio corporativo" />
+      <SectionHeader sectionTitle="Servicio corporativo" bg="corporativo" />
       <Welcome />
       <Services />
       <Counter />

@@ -1,11 +1,34 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import parser from "html-react-parser"
 import { AiOutlineCar } from "react-icons/ai"
 import { BsChatDots } from "react-icons/bs"
 import { GiCarKey } from "react-icons/gi"
 
 import Slider from "./slider"
 
-const welcome = () => {
+const Welcome = () => {
+  const data = useStaticQuery(graphql`
+    {
+      wordpress {
+        nosotros(id: "historia", idType: SLUG) {
+          content
+          title
+          featuredImage {
+            node {
+              sourceUrl
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const {
+    wordpress: { nosotros: historia },
+  } = data
+
   return (
     <section className="welcome-4 page-section-ptb white-bg">
       <div className="container">
@@ -13,28 +36,15 @@ const welcome = () => {
           <div className="col-md-10">
             <div className="section-title">
               <span>Bienvenido a Adriano</span>
-              <h2>HISTORIA</h2>
+              <h2>{historia.title}</h2>
               <div className="separator" />
-              <p>
-                Automotriz y Servicio Adriano nace como un proyecto familiar,
-                iniciamos en Setiembre del 2008, en búsqueda de nuevas
-                oportunidades de negocio y lo estamos logrando, unas de las
-                estrategias más importantes en nuestro emprendimiento es la
-                calidad de los repuestos y la atención a nuestros cliente, esto
-                ayudo a fidelizar a nuestros clientes. La misión de Autopartes
-                Adriano es brindar los mejores repuestos, calidad y precio. Esto
-                lo haremos con alianzas estratégicas para importar los
-                repuestos. Nuestra Visión es ofrecer a nuestros clientes{" "}
-                <strong>más de 5000 productos multimarca</strong> para el
-                mantenimiento y seguridad de vehículos livianos y pesados,
-                además de ser los distribuidores más importantes del Sur Chico.
-              </p>
+              {parser(historia.content)}
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-md-12">
-            <Slider />
+            <Slider image={historia.featuredImage.node} />
           </div>
         </div>
         <div className="row">
@@ -86,4 +96,4 @@ const welcome = () => {
   )
 }
 
-export default welcome
+export default Welcome

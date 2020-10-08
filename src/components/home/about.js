@@ -1,13 +1,13 @@
-import React from "react";
-import parser from "html-react-parser";
-import { useStaticQuery, graphql } from "gatsby";
-import Features from "./features";
+import React from "react"
+import parser from "html-react-parser"
+import { useStaticQuery, graphql } from "gatsby"
+import Features from "./features"
 
 const About = () => {
   const data = useStaticQuery(graphql`
     {
       wordpress {
-        nosotrosBy(slug: "nuestros-servicios") {
+        nosotros(id: "servicios", idType: SLUG) {
           content
           title
           featuredImage {
@@ -26,11 +26,11 @@ const About = () => {
         }
       }
     }
-  `);
+  `)
 
   const {
-    wordpress: { nosotrosBy: nosotros },
-  } = data;
+    wordpress: { nosotros },
+  } = data
 
   return (
     <section className="welcome-3 white-bg page-section-ptb">
@@ -64,7 +64,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

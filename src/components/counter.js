@@ -1,12 +1,12 @@
-import React from "react";
-import CountUp from "react-countup";
-import { AiOutlineCar } from "react-icons/ai";
-import { BsChatDots } from "react-icons/bs";
-import { FaRegUserCircle } from "react-icons/fa";
+import React from "react"
+import CountUp from "react-countup"
+import { AiOutlineCar } from "react-icons/ai"
+import { BsChatDots } from "react-icons/bs"
+import { FaRegUserCircle } from "react-icons/fa"
 
 const counter = () => {
   return (
-    <section className="counter counter-style-2 bg-red bg-1 bg-overlay-black-70 page-section-ptb">
+    <section className="counter counter-style-2 bg-red bg-3 bg-overlay-black-70 page-section-ptb">
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 item">
@@ -15,7 +15,11 @@ const counter = () => {
               <div className="info">
                 <h6 className="text-white">Repuestos en stock</h6>
                 <AiOutlineCar />
-                <CountUp end={5000} duration={40} className="timer text-white" />
+                <CountUp
+                  end={5000}
+                  duration={40}
+                  className="timer text-white"
+                />
               </div>
             </div>
           </div>
@@ -42,7 +46,7 @@ const counter = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default counter;
+export default counter

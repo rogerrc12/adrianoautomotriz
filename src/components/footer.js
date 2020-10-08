@@ -1,11 +1,11 @@
 import React from "react"
 import LogoWhite from "../assets/images/logo-white.svg"
 import { Link } from "gatsby"
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
+import { FaFacebook } from "react-icons/fa"
 import { RiArrowRightSLine } from "react-icons/ri"
 
 const footer = () => (
-  <footer className="footer bg-3 bg-overlay-black-90">
+  <footer className="footer bg-3 bg-overlay-black-80">
     <div className="container">
       <div className="row">
         <div className="col-md-12">
@@ -16,7 +16,7 @@ const footer = () => (
                   Facebook <FaFacebook />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="dribbble" href="/">
                   Instagram <FaInstagram />
                 </a>
@@ -25,7 +25,7 @@ const footer = () => (
                 <a className="behance" href="/">
                   Linkedin <FaLinkedin />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

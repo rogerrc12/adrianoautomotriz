@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+import { Link } from "gatsby"
 
-const sectionHeader = ({ sectionTitle }) => {
+const sectionHeader = ({ sectionTitle, bg }) => {
   return (
-    <section className="inner-intro bg-1 bg-overlay-black-70">
+    <section className={`inner-intro bg-1 bg-${bg} bg-overlay-black-60`}>
       <div className="container">
         <div className="row text-center intro-title">
           <div className="col-sm-6 text-md-left d-inline-block">
@@ -25,7 +25,7 @@ const sectionHeader = ({ sectionTitle }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default sectionHeader;
+export default sectionHeader

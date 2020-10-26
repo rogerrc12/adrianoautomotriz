@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
 import parser from "html-react-parser";
-import Testimonial from "../../assets/images/team/03.jpg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,7 +31,11 @@ const TestimonialSlider = (props) => {
                 <div className="row">
                   <div className="col-md-3">
                     <div className="testimonial-avtar">
-                      <img className="img-fluid center-block" src={Testimonial} alt="testing" />
+                      <img
+                        className="img-fluid center-block"
+                        src={testimonio.featuredImage.node.sourceUrl}
+                        alt={testimonio.featuredImage.node.slug}
+                      />
                     </div>
                   </div>
                   <div className="col-lg-9 col-md-9 col-sm-9">

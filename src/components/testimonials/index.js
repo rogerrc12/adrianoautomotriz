@@ -1,6 +1,6 @@
-import React from "react";
-import Slider from "./slider";
-import { useStaticQuery, graphql } from "gatsby";
+import React from "react"
+import Slider from "./slider"
+import { useStaticQuery, graphql } from "gatsby"
 
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
@@ -13,17 +13,23 @@ const Testimonials = () => {
               autor
               cargo
             }
+            featuredImage {
+              node {
+                sourceUrl
+                slug
+              }
+            }
           }
         }
       }
     }
-  `);
+  `)
 
   const {
     wordpress: {
       testimonios: { nodes: testimonios },
     },
-  } = data;
+  } = data
 
   return (
     <section className="testimonial-3 white-bg page-section-ptb">
@@ -44,7 +50,7 @@ const Testimonials = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Testimonials;
+export default Testimonials

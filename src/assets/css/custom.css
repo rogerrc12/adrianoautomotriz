@@ -62,11 +62,6 @@
   background-size: cover;
 }
 
-.slide-2 {
-  background: url("../images/slider/02.jpg") center center no-repeat;
-  background-size: cover;
-}
-
 .slide-content {
   position: absolute;
   top: 25%;
@@ -155,4 +150,18 @@
 
 .services a {
   color: #ddd;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 3rem;
+  color: #128c7e;
+}
+
+@media screen and (max-width: 568px) {
+  .whatsapp-btn {
+    font-size: 2rem;
+  }
 }

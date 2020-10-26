@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import { FaRegEnvelope } from "react-icons/fa";
 import { FiClock, FiPhone } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 import PropTypes from "prop-types";
 import React from "react";
 import LogoWhite from "../assets/images/logo-white.svg";
@@ -17,11 +17,11 @@ const Header = ({ location }) => (
               <ul className="list-inline">
                 <li>
                   {" "}
-                  <FaRegEnvelope /> <a href="mailto:support@website.com">support@website.com</a>
+                  <FaRegEnvelope /> <a href="mailto:ventas@adrianoautomotriz.pe">ventas@adrianoautomotriz.pe</a>
                 </li>
                 <li>
                   {" "}
-                  <FiClock /> Lun - Vie 08:00 - 18:00. Sábados 08:00 - 17:00
+                  <FiClock /> Lun - Vie 08:00 - 18:00. Sábados 08:00 - 18:00
                 </li>
               </ul>
             </div>
@@ -30,21 +30,11 @@ const Header = ({ location }) => (
             <div className="topbar-right text-lg-right text-center">
               <ul className="list-inline">
                 <li>
-                  <FiPhone /> (007) 123 456 7890
+                  <FiPhone /> +51 937497797
                 </li>
                 <li>
                   <a href="/">
                     <FaFacebookF />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <FaTwitter />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <FaInstagram />
                   </a>
                 </li>
               </ul>
@@ -66,12 +56,7 @@ const Header = ({ location }) => (
                 <ul className="menu-logo">
                   <li>
                     <Link to="/">
-                      <img
-                        id="logo_dark_img"
-                        src={location === "/" ? Logo : LogoWhite}
-                        className={location === "/" ? "logo-black" : ""}
-                        alt="logo"
-                      />
+                      <img id="logo_dark_img" src={location === "/" ? Logo : LogoWhite} className={location === "/" ? "logo-black" : ""} alt="logo" />
                     </Link>
                     <div className="menu-mobile-collapse-trigger">
                       <span></span>

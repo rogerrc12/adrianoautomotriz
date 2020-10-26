@@ -1,21 +1,21 @@
-import React from "react"
-import parser from "html-react-parser"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from "react";
+import parser from "html-react-parser";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import SectionHeader from "../components/sectionHeader"
-import Counter from "../components/counter"
-import Schedule from "../components/schedule"
+import SectionHeader from "../components/sectionHeader";
+import Counter from "../components/counter";
+import Schedule from "../components/schedule";
 
-const Service = props => {
-  const servicio = props.pageContext.servicio
+const Service = (props) => {
+  const servicio = props.pageContext.servicio;
 
-  console.log(servicio)
+  console.log(servicio);
 
   return (
     <Layout location={`/servicio/${servicio.slug}`}>
       <SEO title={servicio.title} />
-      <SectionHeader sectionTitle={servicio.title} />
+      <SectionHeader sectionTitle={servicio.title} bg="service" />
 
       <section className="service-center white-bg page-section-ptb">
         <div className="container">
@@ -25,11 +25,7 @@ const Service = props => {
               {parser(servicio.content)}
             </div>
             <div className="col-md-6">
-              <img
-                className="img-fluid center-block"
-                src={servicio.featuredImage.node.sourceUrl}
-                alt={servicio.title}
-              />
+              <img className="img-fluid center-block" src={servicio.featuredImage.node.sourceUrl} alt={servicio.title} />
             </div>
           </div>
         </div>
@@ -37,7 +33,7 @@ const Service = props => {
       <Counter />
       <Schedule />
     </Layout>
-  )
-}
+  );
+};
 
-export default Service
+export default Service;

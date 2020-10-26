@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import { Link } from "gatsby";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 import "slick-carousel/slick/slick.css";
@@ -43,19 +42,7 @@ const HomeSlider = () => {
     <section className="page-slider">
       <div className="slider">
         <Slider {...settings} className="slides">
-          <div className="slide slide-1">
-            <div className="slide-content">
-              <h2>Repuestos para autos y camiones de la mejor calidad.</h2>
-              <p>
-                {" "}
-                Somos la tienda de repuestos y accesorios para autos y camiones más completa y atualizada, <br /> te
-                ofrecemos las mejores marcas del mercado.
-              </p>
-              <Link to="/repuestos-personalizados" className="button red">
-                Descubre más
-              </Link>
-            </div>
-          </div>
+          <div className="slide slide-1"></div>
         </Slider>
       </div>
     </section>

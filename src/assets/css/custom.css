@@ -30,11 +30,50 @@
   top: 0;
 }
 
+@media screen and (max-width: 996px) {
+  .mega-menu .menu-links {
+    display: none;
+  }
+
+  .mega-menu .menu-links > li {
+    line-height: 50px;
+  }
+
+  .mega-menu.opened .menu-links {
+    display: block;
+    max-height: 400px;
+    overflow: auto;
+    position: absolute;
+    top: 90px;
+  }
+
+  .mega-menu.opened > section.menu-list-items {
+    float: none;
+  }
+
+  #header.topbar-dark .mega-menu .menu-links > li:first-child > a {
+    padding-left: 12px;
+  }
+}
+
 /* HOME - SLIDER */
 .page-slider {
   clear: both;
   overflow: hidden;
   position: relative;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1024px) {
+  .page-slider {
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-slider {
+    max-height: 300px;
+  }
 }
 
 .slider {
@@ -58,8 +97,14 @@
 }
 
 .slide-1 {
-  background: url("../images/slider/01.jpg") center center no-repeat;
+  background: url("../images/slider/01.jpg") top center no-repeat;
   background-size: cover;
+}
+
+@media screen and (max-width: 1140px) {
+  .slide-1 {
+    background-size: contain;
+  }
 }
 
 .slide-content {
@@ -128,6 +173,12 @@
 .testimonial-slider .slick-active .owl-dot span {
   background: #db2d2e !important;
   width: 24px !important;
+}
+
+@media screen and (max-width: 996px) {
+  .welcome-block p {
+    padding: 0;
+  }
 }
 
 /* FOOTER */

@@ -12,7 +12,12 @@ const footer = () => (
           <div className='social'>
             <ul>
               <li>
-                <a className='facebook' href='https://www.facebook.com/Repuestos-Adriano-SAC-111537727387718' target='_blank' rel='noopener noreferrer'>
+                <a
+                  className='facebook'
+                  href='https://www.facebook.com/Repuestos-Adriano-SAC-111537727387718'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   Facebook <FaFacebook />
                 </a>
               </li>
@@ -68,7 +73,7 @@ const footer = () => (
                 </Link>
               </li>
               <li>
-                <Link to='/repuestos-personalizados'>
+                <Link to='/repuestos'>
                   <RiArrowRightSLine /> Repuestos
                 </Link>
               </li>

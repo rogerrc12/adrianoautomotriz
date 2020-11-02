@@ -15,32 +15,32 @@ const TestimonialSlider = (props) => {
     dotsClass: "owl-dots",
     appendDots: (dots) => <ul>{dots}</ul>,
     customPaging: () => (
-      <button className="owl-dot">
+      <button className='owl-dot'>
         <span></span>
       </button>
     ),
   };
 
   return (
-    <section className="page-slider testimonial-slider owl-carousel owl-theme">
-      <div className="slider">
-        <Slider {...config} className="slides">
+    <section className='testimonial-slider owl-carousel owl-theme'>
+      <div className='slider'>
+        <Slider {...config} className='slides'>
           {props.testimonios.map((testimonio) => (
-            <div className="item" key={testimonio.author.autor}>
-              <div className="testimonial-block">
-                <div className="row">
-                  <div className="col-md-3">
-                    <div className="testimonial-avtar">
+            <div className='item' key={testimonio.author.autor}>
+              <div className='testimonial-block'>
+                <div className='row'>
+                  <div className='col-md-3'>
+                    <div className='testimonial-avtar'>
                       <img
-                        className="img-fluid center-block"
+                        className='img-fluid center-block'
                         src={testimonio.featuredImage.node.sourceUrl}
                         alt={testimonio.featuredImage.node.slug}
                       />
                     </div>
                   </div>
-                  <div className="col-lg-9 col-md-9 col-sm-9">
-                    <div className="testimonial-content">{parser(testimonio.content)}</div>
-                    <div className="testimonial-info">
+                  <div className='col-lg-9 col-md-9 col-sm-9'>
+                    <div className='testimonial-content'>{parser(testimonio.content)}</div>
+                    <div className='testimonial-info'>
                       <h6>{testimonio.author.autor}</h6>
                       <span>{testimonio.author.cargo}</span>
                     </div>

@@ -6,6 +6,6 @@
 
 import "./src/assets/css/bootstrap.min.css";
 import "./src/assets/css/mega_menu.css";
-import "./src/assets/css/responsive.css";
 import "./src/assets/css/style.css";
+import "./src/assets/css/responsive.css";
 import "./src/assets/css/custom.css";

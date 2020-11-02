@@ -94,7 +94,7 @@
 
 @media screen and (max-width: 768px) {
   .page-slider {
-    max-height: 300px;
+    max-height: 220px;
   }
 }
 
@@ -231,11 +231,12 @@
   right: 20px;
   font-size: 3rem;
   color: #128c7e;
+  z-index: 999;
 }
 
 @media screen and (max-width: 568px) {
   .whatsapp-btn {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 /* BACKGROUNDS SECTION */
@@ -248,9 +249,21 @@
     height: 350px;
   }
 
+  .page-section-ptb {
+    padding: 20px 0;
+  }
+
   .bg-1 {
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  h2 {
+    font-size: 29px;
+  }
+
+  .client-box h3 {
+    font-size: 26px;
   }
 }

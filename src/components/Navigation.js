@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import LogoWhite from "../assets/images/logo-white.svg";
-import Logo from "../assets/images/logo.svg";
 
 const Navigation = (props) => {
   return (
-    <nav id='menu' className={`mega-menu ${props.opened ? "opened" : ""}`}>
+    <nav id='menu' className={`mega-menu ${props.opened ? "opened" : ""} ${props.location === "/" ? "nav-home" : ""}`}>
       {/* menu list items container */}
       <section className='menu-list-items'>
         <div className='container'>
@@ -15,12 +14,7 @@ const Navigation = (props) => {
               <ul className='menu-logo'>
                 <li>
                   <Link to='/'>
-                    <img
-                      id='logo_dark_img'
-                      src={props.location === "/" ? Logo : LogoWhite}
-                      className={props.location === "/" ? "logo-black" : ""}
-                      alt='logo'
-                    />
+                    <img id='logo_dark_img' src={LogoWhite} alt='logo' />
                   </Link>
                   <div
                     className={`menu-mobile-collapse-trigger ${props.opened ? "active" : ""}`}
